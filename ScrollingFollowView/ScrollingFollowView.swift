@@ -62,6 +62,8 @@ open class ScrollingFollowView: UIView {
                 delayBuffer += differencePoint
             }
             
+        } else if scrollView.contentOffset.y > frame.height && nextDelayBuffer > 0 {
+            
         } else { // Follow scrolling.
             
             if nextPoint < maxFollowPoint {
